@@ -1,8 +1,8 @@
-var player = null;
 var dots = [];
 var pill = null;
 var ghosts = [];
 var fruit = null;
+var player = null;
 
 var levelArr = [[1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [1, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -14,8 +14,8 @@ var level = null;
 function setup() {
   createCanvas(500, 500);
   angleMode(DEGREES);
-
   player = new Player(75, 75, 50);
+
   dots.push(new Dot(125, 75, 50),
             new Dot(175, 75, 50),
             new Dot(225, 75, 50));
