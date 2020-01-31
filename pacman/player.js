@@ -5,14 +5,13 @@ class Player {
     }
   
     Update() {
-      var oldKeyCode = this._keyCode;
-      this._keyCode = keyCode;
-      switch(keyCode) {
-        case LEFT_ARROW: this._pacman.Move(-1, 0); break;
-        case RIGHT_ARROW: this._pacman.Move(1, 0); break;
-        case UP_ARROW: this._pacman.Move(0, -1); break;
-        case DOWN_ARROW: this._pacman.Move(0, 1); break;
-        default: keyCode = oldKeyCode; break;
+      //var oldKeyCode = this._keyCode;
+      //this._keyCode = keyCode;
+      switch (true) {
+        case keyIsDown(LEFT_ARROW): this._pacman.ChangeDirection(-1, 0); break;
+        case keyIsDown(RIGHT_ARROW): this._pacman.ChangeDirection(1, 0); break;
+        case keyIsDown(UP_ARROW): this._pacman.ChangeDirection(0, -1); break;
+        case keyIsDown(DOWN_ARROW): this._pacman.ChangeDirection(0, 1); break;
       }
       
       var t = millis() / 1000;
@@ -21,6 +20,7 @@ class Player {
       t*=2;
       t = abs(t);
   
+      this._pacman.Update();
       this._pacman.DrawPacman(t);
     }
   }

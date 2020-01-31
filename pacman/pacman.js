@@ -1,38 +1,15 @@
 
-class Pacman {
+class Pacman extends Character {
     constructor(x, y, size) {
-      this._x = x;
-      this._y = y;
-      this._size = size;
+      super(x, y, size);
       this._angle = 0;
       this._scaleX = 1;
-    }
-  
-    Move(x, y) {
-      this._x += x;
-      this._y += y;
-  
-      if (x > 0) {
-        this._angle = 0;
-        this._scaleX = 1;
-      }
-      else if (x < 0) {
-        this._angle = 0;
-        this._scaleX = -1;
-      }
-      else if (y > 0) {
-        this._angle = 90;
-        this._scaleX = 1;
-      }
-      else if (y < 0) {
-        this._angle = 270;
-        this._scaleX = 1;
-      }
+      this.wallHit = false;
     }
     
     DrawPacman(amt) {
-      var x = this._x;
-      var y = this._y;
+      var x = this._loc.x;
+      var y = this._loc.y;
       var size = this._size;
   
       noStroke();
@@ -46,7 +23,7 @@ class Pacman {
       var mouthStartAngle = mouthAngle;
       var mouthEndAngle = 360 - mouthAngle;
   
-      var angle = this._angle;
+      var angle = this._direction.heading();
       var scaleX = this._scaleX;
       translate(x, y);
       scale(scaleX, 1);

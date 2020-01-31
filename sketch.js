@@ -3,10 +3,13 @@ var pill = null;
 var ghosts = [];
 var fruit = null;
 var player = null;
+var physics = null;
 
 var levelArr = [[1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [1, 0, 0, 0, 0, 0, 0, 0, 1],
                 [1, 0, 1, 1, 1, 1, 1, 0, 1],
+                [1, 0, 0, 0, 0, 0, 0, 0, 1],
+                [1, 1, 1, 1, 0, 1, 0, 1, 1],
                 [1, 0, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1]];
 var level = null;
@@ -14,7 +17,7 @@ var level = null;
 function setup() {
   createCanvas(500, 500);
   angleMode(DEGREES);
-  player = new Player(75, 75, 50);
+  player = new Player(75, 75, 49);
 
   dots.push(new Dot(125, 75, 50),
             new Dot(175, 75, 50),
@@ -27,13 +30,17 @@ function setup() {
   fruit = new Fruit(275, 75, 50);
 
   level = new Level(50, levelArr);
+
+  physics = new Physics();
+  physics.Register(level._components);
+  physics.Register(player._pacman._collider);
 }
 
 function draw() {
+  physics.Update();
   background(0);
   level.Update();
 
-  player.Update();
   pill.Update();
   fruit.Update();
 
@@ -44,4 +51,6 @@ function draw() {
   ghosts.forEach(ghost => {
     ghost.Update();
   });
+  
+  player.Update();
 } 
