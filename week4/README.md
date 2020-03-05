@@ -9,4 +9,4 @@ Gebruik de p5.js draw() functie om de juiste input op te vangen. Zorg ervoor dat
 
 ## opdracht bekijken
 
-<a href="1920-5BIN.github.io/gamedevelopment-voorbeeld/week4">bekijk het resultaat hier</a>
+<a href="https://1920-5bin.github.io/gamedevelopment-voorbeeld/week4">bekijk het resultaat hier</a>

@@ -8,4 +8,4 @@ Maak voor elke klasse minstens twee objecten aan die je verschillende plaatsen o
 
 ## opdracht bekijken
 
-<a href="1920-5BIN.github.io/gamedevelopment-voorbeeld/week3">bekijk het resultaat hier</a>
+<a href="https://1920-5bin.github.io/gamedevelopment-voorbeeld/week3">bekijk het resultaat hier</a>
