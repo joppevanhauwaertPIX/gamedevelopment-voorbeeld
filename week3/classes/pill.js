@@ -4,15 +4,6 @@
       this._y = y;
       this._size = size;
     }
-
-    Update() {
-      var t = millis() / 1000;
-      t -= floor(millis() / 1000);
-      t-=0.5;
-      t*=2;
-      t = abs(t);
-      this.DrawPill(t);
-    }
   
     DrawPill(amt) {
       var x = this._x;

@@ -6,20 +6,6 @@
       this._color = color;
     }
   
-    Move(x, y) {
-      this._x += x;
-      this._y += y;
-    }
-
-    Update() {
-      var t = millis() / 1000;
-      t -= floor(millis() / 1000);
-      t-=0.5;
-      t*=2;
-      t = abs(t);
-      this.DrawGhost(t);
-    }
-  
     DrawGhost(amt) {
       var x = this._x;
       var y = this._y;

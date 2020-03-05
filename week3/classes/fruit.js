@@ -4,10 +4,6 @@
       this._y = y;
       this._size = size;
     }
-
-    Update() {
-      this.DrawFruit();
-    }
   
     DrawFruit() {
       var x = this._x;

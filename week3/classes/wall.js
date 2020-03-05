@@ -9,10 +9,6 @@
       this._drawRight = drawRight;
       this._drawBottom = drawBottom;
     }
-
-    Update() {
-      this.DrawWall();
-    }
   
     DrawWall() {
       var x = this._x;
