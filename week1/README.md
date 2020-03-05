@@ -1,4 +1,4 @@
-# gamedesign week 1
+# gamedevelopment week 1
 
 ## opdracht
 

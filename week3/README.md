@@ -1,10 +1,10 @@
-# gamedesign week 3
+# gamedevelopment week 3
 
 ## opdracht
 
-Op basis van de lijst met spelobjecten die je opstelde in vorige opdracht, ga je elk spelobject uittekenen met behulp van code in p5.js
+Werk voor elke klasse de Draw() functie uit. Zorg ervoor, met behulp van de juiste parameters/variabelen dat je animerende objecten kunnen bewegen.
 
-De objecten moeten nog niet geanimeerd zijn.
+Maak voor elke klasse minstens twee objecten aan die je verschillende plaatsen op het scherm zet.
 
 ## opdracht bekijken
 

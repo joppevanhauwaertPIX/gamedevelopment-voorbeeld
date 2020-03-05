@@ -1,10 +1,8 @@
-# gamedesign-voorbeeld
+# gamedevelopment week 5
 
 ## opdracht
 
-Maak voor elk van de animerende spelobjecten de nodige parameters aan.
-
-Laat de animerende objecten bewegen.
+Zorg ervoor dat je spelerobject kan botsen tegen andere objecten.
 
 ## opdracht bekijken
 

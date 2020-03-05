@@ -1,16 +1,10 @@
-# gamedesign week 4
+# gamedevelopment week 4
 
 ## opdracht
 
-Geef elk spelobject dat je tekende een eigen functie. Deze functie krijgt minstens 3 parameters mee:
+Maak met behulp van al je klassen een game-level.
 
- - x
- - y
- - size
-
-Zorg ervoor dat deze parameters gebruikt worden om de plaats en de grootte van elk object te bepalen.
-
-Gebruik de functies om elk spelobject minstens 2x op het scherm te tonen, op verschillende plaatsen en met een verschillende grootte.
+Gebruik de p5.js draw() functie om de juiste input op te vangen. Zorg ervoor dat je hoofdpersonage beweegt aan de hand van de input.
 
 ## opdracht bekijken
 

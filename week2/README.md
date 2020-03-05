@@ -1,21 +1,5 @@
-# gamedesign week 2
+# gamedevelopment week 2
 
 ## opdracht
 
-GAME DESIGN
-
-Op basis van de tekst die je in de vorige opdracht maakte, ga je nu gedetailleerd alle spelobjecten (spelers, tegenstanders, dingen, blokken, ...) oplijsten. Elk spelobject moet:
-
- - een duidelijk naam krijgen
- - een definitie krijgen
- - een tekening krijgen
-
-Minstens 3 spelobjecten krijgen een animatie. Beschrijf deze animatie in de definitie.
-
-## Spelobjecten
-
-### 'naam van object invullen'
-
-<img src="#" style="width: 50px">
-
-'beschrijving van object invullen'
+Gebruik de klasse diagrammen uit de vorige opdracht om nu alle klassen uit te werken in Javascript. De functies moeten nog geen code bevatten, maar wel het juiste aantal parameters krijgen.
