@@ -6,7 +6,7 @@ class Pacman {
       this._size = size;
     }
     
-    DrawPacman(amt) {
+    Draw(amt) {
       push();
   
       noStroke();

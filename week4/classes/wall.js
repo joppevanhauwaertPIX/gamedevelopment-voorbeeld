@@ -10,7 +10,7 @@
       this._drawBottom = drawBottom;
     }
   
-    DrawWall() {
+    Draw() {
       var x = this._x;
       var y = this._y;
       var size = this._size;

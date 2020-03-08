@@ -1,6 +1,8 @@
 class Level {
   constructor(tileSize, levelValuesArray) {
     this._size = tileSize;
+    this._pacmanStartPos = createVector(0, 0);
+    this._ghostStartPos = createVector(0, 0);
     this._tiles = this.CreateWalls(levelValuesArray);
   }
 
@@ -14,7 +16,7 @@ class Level {
         
         let drawTop = y == 0 || levelValuesArray[y-1][x] != value;
         let drawLeft = x == 0 || levelValuesArray[y][x-1] != value;
-        let drawRight = x == numCols - 1 || levelValuesArray[y][x+1] != value;;
+        let drawRight = x == numCols - 1 || levelValuesArray[y][x+1] != value;
         let drawBottom = y == numRows - 1 || levelValuesArray[y+1][x] != value;
         
         switch(value) {
@@ -25,6 +27,12 @@ class Level {
                                        drawRight,
                                        drawBottom,
                                        drawLeft)); break;
+          case 2: this._pacmanStartPos = createVector((this._size / 2) + (x * this._size), 
+                                                (this._size / 2) + (y * this._size));
+                  break;
+          case 3: this._ghostStartPos = createVector((this._size / 2) + (x * this._size), 
+                                                (this._size / 2) + (y * this._size));
+                  break;
           default: result.push(new Hallway((this._size / 2) + (x * this._size), (this._size / 2) + (y * this._size), this._size)); break;
         }
       }
@@ -32,10 +40,17 @@ class Level {
     return result;
   }
 
-  DrawLevel() {
+  GetPacmanStartPosition() {
+    return this._pacmanStartPos;
+  }
+
+  GetGhostStartPosition() {
+    return this._ghostStartPos;
+  }
+
+  Draw(amt) {
     this._tiles.forEach(tile => {
-      if (tile instanceof Wall)
-        tile.DrawWall();
+      tile.Draw(amt);
     });
   }
 }

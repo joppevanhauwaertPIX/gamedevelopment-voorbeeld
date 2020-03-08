@@ -5,7 +5,7 @@
       this._size = size;
     }
   
-    DrawPill(amt) {
+    Draw(amt) {
       var x = this._x;
       var y = this._y;
       var size = this._size;
