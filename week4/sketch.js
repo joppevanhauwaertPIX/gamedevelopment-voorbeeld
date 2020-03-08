@@ -40,4 +40,17 @@ function draw() {
   pacman1.Draw(t);
 
   level.Draw(t);
+
+  if (keyIsDown(UP_ARROW)) {
+    pacman1.Move(0,-1);
+  }
+  else if (keyIsDown(DOWN_ARROW)) {
+    pacman1.Move(0,1);
+  }
+  else if (keyIsDown(LEFT_ARROW)) {
+    pacman1.Move(-1,0);
+  }
+  else if (keyIsDown(RIGHT_ARROW)) {
+    pacman1.Move(1,0);
+  }
 } 

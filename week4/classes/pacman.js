@@ -4,9 +4,19 @@ class Pacman {
       this._x = x;
       this._y = y;
       this._size = size;
+
+      this._xMovement = 0;
+      this._yMovement = 0;
+    }
+
+    Move(x, y) {
+      this._xMovement = x;
+      this._yMovement = y;
     }
     
     Draw(amt) {
+      this._x += this._xMovement;
+      this._y += this._yMovement;
       push();
   
       noStroke();
